@@ -98,9 +98,12 @@ jobs:
 
           # 编译x64固件:
           # cat >> .config <<EOF
-          # CONFIG_TARGET_x86=y
-          # CONFIG_TARGET_x86_64=y
-          # CONFIG_TARGET_x86_64_Generic=y
+          # CONFIG_TARGET_armvirt=y
+          # CONFIG_TARGET_armvirt_64=y
+          # CONFIG_TARGET_armvirt_64_Default=y
+          # CONFIG_TARGET_SUBTARGET="64"
+          # CONFIG_TARGET_PROFILE="Default"
+          # CONFIG_TARGET_ARCH_PACKAGES="aarch64_generic"
           # EOF
 
           # 固件压缩:
@@ -161,6 +164,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          # CONFIG_PACKAGE_luci-app-ddns=y
           # EOF
 
           # LuCI主题:
